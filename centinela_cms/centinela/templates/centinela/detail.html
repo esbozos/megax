@@ -17,8 +17,17 @@
 <div class="banner container-fluid col-md-10 col-md-offset-1" style="">
     {% include "centinela/banners.html" %}
 </div>
-{% include "centinela/nav_sections.html" %}
+
+{% if site.LATERAL_BAR == 'LEFT' %}
+<div id="lateral" class="col-md-3 col-sm-12">
+    {% get_more_read %}
+    {% get_lateral_widgets %}
+</div>
+{% endif %}
+
 <div id="main" class="col-md-7 col-md-offset-1 col-xs-12" itemscope itemtype="http://schema.org/newsArticle">
+    {% include "centinela/nav_sections.html" %}
+    {% get_post_widgets 'before_post' %}
     <h2 itemprop="headline">{{ post.title }}</h2>
     <p>
         <small class="text-muted">
@@ -41,25 +50,19 @@
 <div class="content" itemprop="articleBody">
     <p>{{ post.content | safe }}</p>
 </div>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- sky3 adaptable prospectiva -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7406359102676080"
-     data-ad-slot="2169856764"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+{% get_post_widgets 'after_post' %}
+
     {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
     {% if post.comments_status == true %}
         <div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-version="v2.3"></div>
     {% endif %}
 </div>
-<div id="rigth" class="col-md-3 col-xs-12">
-    {% get_more_in_category post.category %}
-    {% get_widgets %}
+{% if site.LATERAL_BAR == 'RIGHT' %}
+<div id="lateral" class="col-md-3 col-sm-12">
+    {% get_more_read %}
+    {% get_lateral_widgets %}
 </div>
+{% endif %}
 {% endblock %}
 
 {% block javascript %}

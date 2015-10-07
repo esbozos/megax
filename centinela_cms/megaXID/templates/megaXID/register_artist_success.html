@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load centinela_column %}
+{% load centinela_socialshare %}
+{% load staticfiles %}
+{% load addclass %}
+
+{% block title %}
+   Artist  - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+<div class="banner container-fluid col-md-10 col-md-offset-1" style="">
+    {% include "centinela/banners.html" %}
+</div>
+{% include "centinela/nav_sections.html" %}
+<div id="main" class="col-md-7 col-md-offset-1 col-xs-12" itemscope itemtype="http://schema.org/newsArticle">
+    <h2 itemprop="headline">Registro de Artista</h2>
+    <hr class="feature-divider>">
+    <div class="jumbotron">Se ha registrado exitosamente</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- sky3 adaptable prospectiva -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7406359102676080"
+     data-ad-slot="2169856764"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+</div>
+<div id="rigth" class="col-md-3 col-xs-12">
+    {% get_more_read %}
+    {% get_widgets %}
+</div>
+{% endblock %}

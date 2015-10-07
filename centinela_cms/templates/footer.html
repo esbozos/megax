@@ -1,17 +1,19 @@
+{% load centinela_column %}
 <footer>
         <div class="container">
 
             <div class="col-xs-12 text-center">
                  <hr class="featurette-divider">
+                {% get_post_widgets 'footer' %}
             <div itemscope itemtype="http://schema.org/Organization">
-                <span itemprop="name">megaX - Prospectiva Venezuela C.A. J-40653974-0</span>
+                <span itemprop="name">© megaX - J-40653974-0</span>
 
                 <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                     <span itemprop="postalCode">1010</span>
                     <span itemprop="addressLocality">Caracas, Venezuela</span>
                 </div>
                 E-mail: <span itemprop="email">contacto(at)megax.com.ve</span>
-                <span>Todos los derechos reservados 2015</span>
+                <span> Todos los derechos reservados 2015</span>
 
                 <div>
                     <span>Desarrollado por Cúbico - Prospectiva Venezuela</span>
