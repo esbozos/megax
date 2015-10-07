@@ -8,10 +8,6 @@
    Artist  - {{ block.super }}
 {% endblock %}
 
-{% block stylesheet %}
-    {{ block.super }}
-    <link href="{% static 'css/megax.css' %}" rel="stylesheet" media="screen" >
-{% endblock %}
 {% block content %}
 <div class="banner container-fluid col-md-10 col-md-offset-1" style="">
     {% include "centinela/banners.html" %}
