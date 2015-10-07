@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-07 15:15-0430\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: megaXID/models.py:11
+msgid "male"
+msgstr "Masculino"
+
+#: megaXID/models.py:12
+msgid "female"
+msgstr "Femenino"
+
+#: megaXID/models.py:16
+msgid "First Name"
+msgstr "Nombres"
+
+#: megaXID/models.py:17
+msgid "Last Name"
+msgstr "Apellidos"
+
+#: megaXID/models.py:18
+msgid "Document ID"
+msgstr "Cédula o documento de identidad"
+
+#: megaXID/models.py:19
+msgid "Nickname"
+msgstr "Apodo"
+
+#: megaXID/models.py:19
+msgid ""
+"if people know you by a nickname, or want to introduce one. please indicate "
+"now."
+msgstr ""
+"Si la gente le conoce por un apodo, o quieres darte a conocer a través de "
+"uno por favor indicalo."
+
+#: megaXID/models.py:20
+msgid "Gender"
+msgstr "Género"
+
+#: megaXID/models.py:21
+msgid "Birthday"
+msgstr "Fecha de Nacimiento"
+
+#: megaXID/models.py:21
+msgid "format DD/MM/YYYY"
+msgstr "Formato DD/MM/YYYY"
+
+#: megaXID/models.py:22
+msgid "Email"
+msgstr "Correo Electrónico"
+
+#: megaXID/models.py:23
+msgid "Phone"
+msgstr "Teléfono(s)"
+
+#: megaXID/models.py:24
+msgid "Address"
+msgstr "Dirección"
+
+#: megaXID/models.py:26
+msgid "Profile Photo"
+msgstr "Foto de perfil"
+
+#: megaXID/models.py:27
+msgid "Photo of your work #1"
+msgstr "Foto de muestra de su trabajo #1"
+
+#: megaXID/models.py:27
+msgid "show us your best art work"
+msgstr "Muéstranos lo mejor de tu trabajo artístico"
+
+#: megaXID/models.py:28
+msgid "Photo of your work #2"
+msgstr "Foto de muestra de su trabajo #2"
+
+#: megaXID/models.py:29
+msgid "Web places"
+msgstr "Sitios Web"
+
+#: megaXID/models.py:29
+msgid ""
+"List of your personal and professional websites, socials accounts and others."
+msgstr "Liste sus sitios webs, redes sociales ente otros."
+
+#: megaXID/models.py:30
+msgid "Skills"
+msgstr "Habilidades"
+
+#: megaXID/models.py:30
+msgid "tell us about your skills on body art."
+msgstr "Cuéntanos un poco de tus habilidades en el arte corporal"
+
+#: megaXID/models.py:31
+msgid "Years experience"
+msgstr "Años de Experiencia"
+
+#: megaXID/models.py:32
+msgid "have you applied to the show before?"
+msgstr "¿Has aplicado antes para el programa?"
+
+#: megaXID/models.py:32
+msgid "Yes"
+msgstr "Si"
+
+#: megaXID/models.py:33
+msgid "Payment details"
+msgstr "Detalles del pago"
+
+#: megaXID/models.py:33
+msgid ""
+"please indicate reference number, date, bank and amount of your payment."
+msgstr ""
+"indique el número de referencia, fecha, banco y monto de su depósito o "
+"transferencia."
+
+#: megaXID/models.py:34
+msgid ""
+"By clicking \"Yes\" bellow you have acknowledged and agreed to the terms and "
+"conditions."
+msgstr ""
+"Al hacer click a continuación usted reconoce haber leído y aceptado los "
+"terminos y condiciones del programa"
+
+#: megaXID/models.py:35
+msgid "Created at"
+msgstr "Creado"
+
+#: megaXID/models.py:36
+msgid "slug"
+msgstr "Slug"
+
+#: megaXID/models.py:52
+msgid "artist"
+msgstr "Artista"
+
+#: megaXID/models.py:53
+msgid "artists"
+msgstr "Artistas"
