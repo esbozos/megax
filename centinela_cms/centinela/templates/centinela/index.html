@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+{% include "centinela/sliders.html" %}
+<div class="navIni">
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="">
+            <div class="col-xs-12 col-md-8">
+                <ul class="nav nav-pills">
+                    <li role="presentation" title="Inicio"><a href="#">
+                        <span class="fa fa-home"></span>
+                        <span class="hidden-sm hidden-xs">Inicio</span>
+                    </a></li>
+                    <li role="presentation" title="Noticias"><a href="#news">
+                        <span class="fa fa-newspaper-o"></span>
+                        <span class="hidden-sm hidden-xs">Noticias</span>
+                    </a></li>
+                    <li role="presentation" title="Sistemas"><a href="#system">
+                        <span class="fa fa-link"></span>
+                        <span class="hidden-sm hidden-xs">Sistemas</span>
+                    </a></li>
+                    <li class="hidden-md hidden-lg" role="presentation" title="Twitter">
+                        <a href="https://www.twitter.com/Prospectiva_VE" target="_blank"><span class="fa fa-twitter"></span></a>
+                    </li>
+                    <li class="hidden-md hidden-lg" role="presentation" title="Facebook">
+                        <a href="https://www.facebook.com/ProspectivaVE" target="_blank"><span class="fa fa-facebook"></span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-4 hidden-sm hidden-xs">
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" title="Twitter">
+                        <a href="https://www.twitter.com/Prospectiva_VE" target="_blank"><span class="fa fa-twitter"></span></a>
+                    </li>
+                    <li role="presentation" title="Facebook">
+                        <a href="https://www.facebook.com/ProspectivaVE" target="_blank"><span class="fa fa-facebook"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+{% if latest_post_list %}
+<div id="news" class="container-fluid view wraper">
+    {% for post in latest_post_list %}
+    <a href="{% url 'centinela:detail' post.slug  post.id %}">
+        <div class="news_list_item col-xs-6 col-md-3 col-md-offset-0">
+            <div class="box10">
+                <div class="news_list_content">
+                    <h4>{{ post.title }}</h4>
+                    <div class="content" style="display: none;"> {{ post.content | safe | truncatechars_html:200 }}
+                    </div>
+                    <p>{{ post.category.name }}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+    <div class="col-xs-12 text-center">
+        <a href="{% url 'centinela:news' %}"><h1 style="font-family: Lobster, sans-serif;">Más en Noticias</h1></a>
+    </div>
+</div>
+{% else %}
+<p>No post are available. </p>
+{% endif %}
+
+<div id="systems" class="container-fluid wraper">
+    <div class="view">
+        <hr class="feature-divider">
+        <div class="col-xs-12 text-center">
+            <a href="{% url 'centinela:news' %}"><h1 class="snood" style="font-family: Lobster, sans-serif;">Nuestros Servicios</h1></a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <img class="img img-responsive"
+                     src="{% static 'images/priority-prospectiva.jpg' %}"
+                     data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                <div class="caption">
+                    <h3>Priority Report</h3>
+                    <p>Proximamente disponible.</p>
+                    <p><a href="#" class="btn btn-primary disable" role="button">Volver</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <div class="thumbnail">
+                <img class="img img-responsive" src="{% static 'images/aeon.jpg' %}"
+                     data-holder-rendered="true" style="height: 200px; width: 100%; display: block;">
+                <div class="caption">
+                    <h3>Aeon</h3>
+                    <p>Proximamente disponible.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Volver</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block stylesheet %}
+    {{ block.super }}
+            <link href="{% static 'font-awesome-4.4.0/css/font-awesome.min.css' %}" rel="stylesheet" media="screen">
+            <link href="{% static 'css/fonts.css' %}" rel="stylesheet" media="screen">
+            <link href="{% static 'bootstrap/css/carousel.css' %}" rel="stylesheet" media="screen">
+{% endblock %}

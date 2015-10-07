@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Sky2 Automatic Prospectiva -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-7406359102676080"
+                     data-ad-slot="9693123567"
+                     data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+
+{% if active_sliders_list %}
+<div id="banner">
+        <ul>
+            {% for slider in active_sliders_list %}
+            {% if slider.is_active %}
+                <li {% if forloop.first %}
+                        class="active"
+                    {% endif %} data-count="{{ forloop.counter }}">
+                    {% if slider.link_target %}
+                        <a href="{{ slider.link_target }}" target="_blank">
+                        <img src="/media/{{ slider.image_file }}" />
+                        </a>
+                    {% else %}
+                        <img src="/media/{{ slider.image_file }}" />
+                    {% endif %}
+                </li>
+            {% endif %}
+      {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
